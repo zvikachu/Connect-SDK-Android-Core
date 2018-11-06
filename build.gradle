@@ -12,10 +12,11 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        google()
     }
 }
 
-apply plugin: 'android-library'
+apply plugin: 'com.android.library'
 //apply plugin: 'robolectric'
 
 android {
