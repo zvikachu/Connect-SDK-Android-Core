@@ -352,6 +352,17 @@ public class FireTVService extends DeviceService implements MediaPlayer, MediaCo
         }
     }
 
+    public void sendCommand(String command,ResponseListener<Object> listener) {
+        final String error = "Error pausing";
+        RemoteMediaPlayer.AsyncFuture<Void> asyncFuture = null;
+        try {
+            asyncFuture = remoteMediaPlayer.sendCommand(command);
+            handleVoidAsyncFuture(listener, asyncFuture, error);
+        } catch (Exception e) {
+            Util.postError(listener, new FireTVServiceError(error, e));
+        }
+    }
+
     /**
      * Stop current media and close FireTV application.
      */
