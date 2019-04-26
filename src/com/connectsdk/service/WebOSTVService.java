@@ -20,19 +20,6 @@
 
 package com.connectsdk.service;
 
-import java.io.ByteArrayOutputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -88,6 +75,19 @@ import com.connectsdk.service.webos.WebOSTVKeyboardInput;
 import com.connectsdk.service.webos.WebOSTVMouseSocketConnection;
 import com.connectsdk.service.webos.WebOSTVServiceSocketClient;
 import com.connectsdk.service.webos.WebOSTVServiceSocketClient.WebOSTVServiceSocketClientListener;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 @SuppressLint("DefaultLocale")
 public class WebOSTVService extends DeviceService implements Launcher, MediaControl, MediaPlayer, VolumeControl, TVControl, ToastControl, ExternalInputControl, MouseControl, TextInputControl, PowerControl, KeyControl, WebAppLauncher, PlaylistControl {
@@ -218,7 +218,7 @@ public class WebOSTVService extends DeviceService implements Launcher, MediaCont
         super(serviceDescription, serviceConfig);
         setServiceDescription(serviceDescription);
 
-        pairingType = PairingType.FIRST_SCREEN;
+        pairingType = PairingType.PIN_CODE;
 
         mAppToAppIdMappings = new ConcurrentHashMap<String, String>();
         mWebAppSessions = new ConcurrentHashMap<String, WebOSWebAppSession>();

@@ -548,6 +548,76 @@ public class RokuService extends DeviceService implements Launcher, MediaPlayer,
                 this, uri, null, listener);
         request.send();
     }
+    public void astrix(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "Info";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void instantReplay(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "InstantReplay";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void volUp(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "VolumeUp";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void volDown(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "VolumeDown";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void volMute(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "VolumeMute";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void launchChannel(String channelNum, ResponseListener<Object> listener) {
+        String action = "launch";
+        String param = channelNum;
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void keyboardKey(String charToSend, ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "Lit_"+charToSend.toLowerCase();
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
 
     @Override
     public void pause(ResponseListener<Object> listener) {
