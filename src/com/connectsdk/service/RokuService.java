@@ -588,9 +588,100 @@ public class RokuService extends DeviceService implements Launcher, MediaPlayer,
                 this, uri, null, listener);
         request.send();
     }
+
     public void volMute(ResponseListener<Object> listener) {
         String action = "keypress";
         String param = "VolumeMute";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void tvInputTuner(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "InputTuner";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void tvInputHDMI1(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "InputHDMI1";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void tvInputHDMI2(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "InputHDMI2";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void tvInputHDMI3(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "InputHDMI3";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void tvInputHDMI4(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "InputHDMI4";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void tvInputAVI(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "InputAV1";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void powerOff(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "PowerOff";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void ChannelUp(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "ChannelUp";
+
+        String uri = requestURL(action, param);
+
+        ServiceCommand<ResponseListener<Object>> request = new ServiceCommand<ResponseListener<Object>>(
+                this, uri, null, listener);
+        request.send();
+    }
+    public void ChannelDown(ResponseListener<Object> listener) {
+        String action = "keypress";
+        String param = "ChannelDown";
 
         String uri = requestURL(action, param);
 
